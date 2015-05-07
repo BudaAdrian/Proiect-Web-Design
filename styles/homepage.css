@@ -1,0 +1,15 @@
+.scoruri table
+{
+	font-size: 20px;
+	border-style: ridge;
+	border-width: 5px;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+
+.scoruri td
+{
+	border-style: groove;
+	border-width: 2px;
+	padding: 10px;
+}
