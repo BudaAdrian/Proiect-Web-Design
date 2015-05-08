@@ -44,7 +44,7 @@
 			}
 			else
 			{			
-				$mesaj =  "Numele sau parola sunt incorecte! Daca nu v-ați creat un cont vă puteți înregistra <a /Proiect/href = 'register.php'>aici</a>.";
+				$mesaj =  "Numele sau parola sunt incorecte! Daca nu v-ați creat un cont vă puteți înregistra <a href = \"" . ROOT_LINK . "register.php\">aici</a>.";
 				$_SESSION["login"] = "";
 				$_SESSION["chestionar"] = "";
 			}
