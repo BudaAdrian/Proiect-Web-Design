@@ -9,7 +9,7 @@
 	$nume = $parola = $parola_confirm = "";
 	$numeErr = $parolaErr = $parola_confirmErr = "";
 	$mesaj = "";
-	if (!empty($_SESSION["login"]))//(isset($_SESSION["login"]))
+	if (!empty($_SESSION["login"]))
 	{
 		$nume = $_SESSION["login"];
 	}
@@ -58,12 +58,12 @@
 					if (isset($_SESSION["login"]) && !empty($_SESSION["login"]))
 					{
 						$mesaj = "Parolă schimbată cu succes. Veți fi redirecționat către pagina cu setări ale contului în câteva momente.";
-						header("refresh: 5;url = account.php");
+						header("refresh: 5;url = " . ROOT_LINK . "account.php");
 					}
 					else
 					{
 						$mesaj = "Parolă schimbată cu succes. Veți fi redirecționat către pagina de login în câteva momente.";
-						header("refresh: 5;url = login.php");
+						header("refresh: 5;url = " . ROOT_LINK . "login.php");
 					}
 				}
 			}

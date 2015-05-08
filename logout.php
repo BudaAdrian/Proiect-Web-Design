@@ -1,4 +1,5 @@
 <?php
+	require_once "root-config.php";
 	$_SESSION = array();
 	if (ini_get("session.use_cookies")) 
 	{
@@ -9,5 +10,5 @@
 		);
 	}
 	session_destroy();
-	header("location:homepage.php");
+	header("location:" . ROOT_LINK . "homepage.php");
 ?>

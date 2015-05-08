@@ -7,7 +7,7 @@
 	}
 	if (isset($_SESSION["login"]) && !empty($_SESSION["login"]))
 	{
-		header("location:homepage.php");
+		header("location:" . ROOT_LINK . "homepage.php");
 		exit;
 	}
 	$pagCurenta = "register";
@@ -65,7 +65,7 @@
 				else 
 				{
 					$mesaj = "V-ați înregistrat cu succes. Veți fi redirecționat către pagina de login în câteva momente.";
-					header("refresh: 5;url = login.php");
+					header("refresh: 5;url = " . ROOT_LINK . "login.php");
 				}
 			}
 			mysqli_free_result($rez);

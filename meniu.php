@@ -15,6 +15,6 @@
 				<li <?php if($pagCurenta === "form5") echo "id = \"curenta\"" ?>><a href = "<?php echo ROOT_LINK . "chestionare/chestionar5.php"?>">Chestionarul 5: Prioritate de trecere</a></li>
 			</ul>
 		</li>
-		<li <?php if($pagCurenta === "setari") echo "id = \"curenta\""; ?> class = "setari" <?php echo $stareSetari ?>><a href = "account.php">Setări cont</a></li>
+		<li <?php if($pagCurenta === "setari") echo "id = \"curenta\""; ?> class = "setari" <?php echo $stareSetari ?>><a href = "<?php echo ROOT_LINK . "account.php"?>">Setări cont</a></li>
 	</ul>
 </div>

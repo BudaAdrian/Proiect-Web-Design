@@ -11,7 +11,7 @@
 	{
 		if (!isset($_SESSION["chestionar"]) && !empty($_SESSION["chestionar"]))
 		{
-			header("location: homepage.php");
+			header("location:" . ROOT_LINK . "homepage.php");
 			exit;
 		}
 		else
@@ -86,7 +86,7 @@
 	}
 	else
 	{
-		header("location: homepage.php");
+		header("location:" . ROOT_LINK . "homepage.php");
 		exit;
 	}
 ?>

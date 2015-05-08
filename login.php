@@ -11,7 +11,7 @@
 	$mesaj = "";
 	if (isset($_SESSION["login"]) && !empty($_SESSION["login"]))
 	{
-		header("location:homepage.php");
+		header("location:" . ROOT_LINK . "homepage.php");
 		exit;
 	}
 	if (isset($_POST["submit"]))
@@ -40,7 +40,7 @@
 			{
 				$_SESSION["login"] = $nume;
 				$_SESSION["chestionar"] = "1";
-				header("location:homepage.php");
+				header("location:" . ROOT_LINK . "homepage.php");
 			}
 			else
 			{			

@@ -3,7 +3,7 @@
 	session_start();
 	if (!isset($_SESSION["login"]) || empty($_SESSION["login"]))
 	{
-		header("location:../homepage.php");
+		header("location:" . ROOT_LINK . "homepage.php");
 		exit;
 	}
 	else $_SESSION["chestionar"] = "1";

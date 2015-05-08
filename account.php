@@ -7,7 +7,7 @@
 	}
 	if (empty($_SESSION["login"]))
 	{
-		header("location: homepage.php");
+		header("location:" . ROOT_LINK . "homepage.php");
 		exit;
 	}
 	$mesaj1 = $mesaj2 = $mesaj3 = $mesaj4 = $mesaj5 = $mesajAll = "";
