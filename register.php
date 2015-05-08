@@ -1,5 +1,6 @@
 <?php
-	require_once("config.php");
+	require_once "DB-config.php";
+	require_once "root-config.php";
 	if (!isset($_SESSION))
 	{
 		session_start();
@@ -72,17 +73,12 @@
 	}
 ?>
 
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
 <title>Înregistrare</title>
 </head>
 
 <body>
-<?php include("header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <h2>Formular de înregistrare:</h2>
 <?php echo $mesaj ?>
 <form name = "form_inregistrare" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">

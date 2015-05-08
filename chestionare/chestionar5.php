@@ -1,21 +1,17 @@
 <?php
 	session_start();
+	require_once "../root-config.php";
 	if (!isset($_SESSION["login"]) || empty($_SESSION["login"]))
 	{
 		header("location:../homepage.php");
 		exit;
 	}
-	$_SESSION["chestionar"] = "5";
+	else $_SESSION["chestionar"] = "5";
 	$pagCurenta = "form5";
 ?>
 
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/chestionare.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
+<link rel = "stylesheet" type = "text/css" href = "<?php echo ROOT_LINK . "styles/chestionare.css" ?>"></link>
 <title>Chestionar 5</title>
 
 <script>
@@ -77,9 +73,9 @@ function urm()
 </head>
 
 <body onLoad = "init()">
-<?php include("../header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <h1>Chestionarul 5: Prioritate de trecere</h1>
-<form name = "chestionar" method = "post" action = "/Proiect/check.php">
+<form name = "chestionar" method = "post" action = "<?php echo ROOT_LINK . "check.php" ?>">
 	<div class = "intrebare">
 		<table>
 			<tr>
@@ -99,7 +95,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q1.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q1.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>
@@ -188,7 +184,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q5.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q5.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>
@@ -211,7 +207,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q6.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q6.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>
@@ -234,7 +230,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q7.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q7.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>
@@ -257,7 +253,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q8.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q8.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>
@@ -280,7 +276,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q9.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q9.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>
@@ -303,7 +299,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar5/q10.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar5/q10.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>

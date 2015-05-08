@@ -1,21 +1,17 @@
 <?php
 	session_start();
+	require_once "../root-config.php";
 	if (!isset($_SESSION["login"]) || empty($_SESSION["login"]))
 	{
 		header("location:../homepage.php");
 		exit;
 	}
-	$_SESSION["chestionar"] = "2";
+	else $_SESSION["chestionar"] = "2";
 	$pagCurenta = "form2";
 ?>
 
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/chestionare.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
+<link rel = "stylesheet" type = "text/css" href = "<?php echo ROOT_LINK . "styles/chestionare.css" ?>"></link>
 <title>Chestionar 2</title>
 
 <script>
@@ -73,9 +69,9 @@ function urm()
 </head>
 
 <body onLoad = "init()">
-<?php include("../header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <h1>Chestionarul 2: Viteza și distanța dintre vehicule</h1>
-<form name = "chestionar" method = "post" action = "/Proiect/check.php">
+<form name = "chestionar" method = "post" action = "<?php echo ROOT_LINK . "check.php" ?>">
 	<div class = "intrebare">
 		<table>
 			<tr>
@@ -161,7 +157,7 @@ function urm()
 						</tr>
 					</table>
 				</td>
-				<td><img src = "/Proiect/images/chestionar2/q4.jpg"></td>
+				<td><img src = "<?php echo ROOT_LINK . "images/chestionar2/q4.jpg" ?>"></td>
 			</tr>
 		</table>
 	</div>

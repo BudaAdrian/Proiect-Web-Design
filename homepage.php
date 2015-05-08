@@ -1,5 +1,6 @@
 <?php
-	require_once("config.php");
+	require_once "DB-config.php";
+	require_once "root-config.php";
 	if (!isset($_SESSION))
 	{
 		session_start();
@@ -19,7 +20,6 @@
 	if ((!isset($_SESSION["login"]) && empty($_SESSION["login"])) || (isset($_SESSION["login"]) && empty($_SESSION["login"])))
 	{
 		$noLogin = "Bun venit pe site. Ca să accesezi chestionarele de pe site trebuie să te loghezi. Dacă nu ai cont va trebui să te înregistrezi.";
-		
 	}
 	else
 	{	
@@ -58,18 +58,13 @@
 	}
 ?>
 
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/homepage.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
+<link rel = "stylesheet" type = "text/css" href = "<?php echo ROOT_LINK . "styles/homepage.css" ?>"></link>
 <title>Teste grilă</title>
 </head>
 
 <body>
-<?php include("header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <?php echo $noLogin ?>
 <?php echo $chestionare ?>
 </body>

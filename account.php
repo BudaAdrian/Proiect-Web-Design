@@ -1,5 +1,6 @@
 <?php
-	require_once("config.php");
+	require_once "DB-config.php";
+	require_once "root-config.php";
 	if (!isset($_SESSION))
 	{
 		session_start();
@@ -62,17 +63,12 @@
 	
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
 <title>Cont</title>
 </head>
 
 </body>
-<?php include("header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <div>
 	<h3>Resetare scoruri:</h3>
 	<form method = "post" action = " <?php echo $_SERVER['PHP_SELF'] ?>">
@@ -107,7 +103,7 @@
 </div>
 <div>
 	<h3>Resetare parolă:</h3>
-	<input id = "reset_pass" type = "button" value = "Schimbă parola" onclick = "window.location.href = '/Proiect/reset_pass.php'"><br>
+	<input id = "reset_pass" type = "button" value = "Schimbă parola" onclick = "window.location.href = '<?php echo ROOT_LINK . "reset_pass.php"?>'"><br>
 <div>
 </body>
 </html>

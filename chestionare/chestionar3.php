@@ -1,21 +1,17 @@
 <?php
 	session_start();
+	require_once "../root-config.php";
 	if (!isset($_SESSION["login"]) || empty($_SESSION["login"]))
 	{
 		header("location:../homepage.php");
 		exit;
 	}
-	$_SESSION["chestionar"] = "3";
+	else $_SESSION["chestionar"] = "3";
 	$pagCurenta = "form3";
 ?>
 
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/chestionare.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
+<link rel = "stylesheet" type = "text/css" href = "<?php echo ROOT_LINK . "styles/chestionare.css" ?>"></link>
 <title>Chestionar 3</title>
 
 <script>
@@ -73,9 +69,9 @@ function urm()
 </head>
 
 <body onLoad = "init()">
-<?php include("../header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <h1>Chestionarul 3: Obligațiile conducătorilor de autovehicule</h1>
-<form name = "chestionar" method = "post" action = "/Proiect/check.php">
+<form name = "chestionar" method = "post" action = "<?php echo ROOT_LINK . "check.php" ?>">
 	<div class = "intrebare">
 		<table>
 			<tr>

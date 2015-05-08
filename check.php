@@ -1,5 +1,6 @@
 <?php
-	require_once("config.php");
+	require_once "DB-config.php";
+	require_once "root-config.php";
 	$pct = 0;
 	if (!isset($_SESSION))
 	{
@@ -90,17 +91,12 @@
 	}
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
 <title>Punctaj chestionar <?php echo $_SESSION["chestionar"] ?></title>
 </head>
 
 <body>
-<?php include("header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <div><?php echo $mesaj ?></div>
 </body>
 </html>

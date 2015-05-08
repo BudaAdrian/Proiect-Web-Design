@@ -1,5 +1,6 @@
 <?php
-	require_once("config.php");
+	require_once "DB-config.php";
+	require_once "root-config.php";
 	if (!isset($_SESSION))
 	{
 		session_start();
@@ -51,17 +52,12 @@
 	}
 ?>
 
-<!DOCTYPE html> 
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="icon" href="/Proiect/images/favicon.ico" type="image/x-icon"/></link>
-<link rel = "stylesheet" type = "text/css" href = "/Proiect/styles/fundal.css"></link>
+<?php include ROOT_DIR . "header.php"; ?>
 <title>Login</title>
 </head>
 
 <body>
-<?php include("header.php"); ?>
+<?php include ROOT_DIR . "meniu.php"; ?>
 <h2>Login</h2>
 <form name = "form_login" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "post">
 	<table>
@@ -78,7 +74,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan = "2">Ți-ai uitat parola? Reseteaz-o <a href = "/Proiect/reset_pass.php">aici</a>.</td>
+			<td colspan = "2">Ți-ai uitat parola? Reseteaz-o <a href = "<?php echo ROOT_LINK .  "reset_pass.php "?>">aici</a>.</td>
 		</tr>
 		<tr>
 			<td colspan = "2"><input type = "submit" name = "submit" value = "Login"></td>
