@@ -1,6 +1,4 @@
 <?php
-	require_once "DB-config.php";
-	require_once "root-config.php";
 	if (!isset($_SESSION))
 	{
 		session_start();

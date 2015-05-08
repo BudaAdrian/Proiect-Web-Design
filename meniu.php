@@ -1,4 +1,4 @@
-<?php require_once "root-config.php"; ?>
+
 
 <div class = "meniu">
 	<ul>
