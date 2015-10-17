@@ -123,7 +123,7 @@ function urm()
 				<td class = "text">
 					<table>
 						<tr>
-							<td>3.)Cum procedează conducătorul autovehiculului când, alfându-se într-o comună, în imediata apropiere a unei treceri pentru pietoni semnalizată ca atare, intenționează să depășească un vehicul aflat în mișcare?</td>
+							<td>3.)Cum procedează conducătorul autovehiculului când, aflându-se într-o comună, în imediata apropiere a unei treceri pentru pietoni semnalizată ca atare, intenționează să depășească un vehicul aflat în mișcare?</td>
 						</tr>
 						<tr>
 							<td><input type = "radio" value = "a" name = "q3" onclick = "raspuns(this)">A.)execută depășirea cu viteză redusă;</td>
